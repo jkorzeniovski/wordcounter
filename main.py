@@ -4,7 +4,7 @@ import speech_recognition as sr
 r = sr.Recognizer()
 
 # Load the audio file
-audio_file = sr.AudioFile('C:/Users\kubak\OneDrive\Pulpit/yyy6.wav')
+audio_file = sr.AudioFile('path/to/yyy6.wav')
 
 # Open the audio file and convert to audio data
 with audio_file as source:
