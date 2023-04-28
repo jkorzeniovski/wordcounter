@@ -9,9 +9,8 @@ ytdlp_options = {
         'preferredcodec': 'wav',  # Convert the audio to wav
         'preferredquality': '192',  # Set the audio quality
     }],
-    'outtmpl': 'mysong.mp3'  # Specify the output file name
+    'outtmpl': 'mysong'  # Specify the output file name
 }
-# --ffmpeg-location:C\Users\kubak\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-6.0-full_build\bin
 
 # Create a yt-dlp object with the options
 ytdlp = yt_dlp.YoutubeDL(ytdlp_options)
