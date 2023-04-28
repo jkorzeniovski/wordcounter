@@ -16,7 +16,7 @@ ytdlp_options = {
 ytdlp = yt_dlp.YoutubeDL(ytdlp_options)
 
 # URL of the video to extract audio from
-video_url = 'https://www.youtube.com/watch?v=Bs4GfrBiYYc'
+video_url = 'https://www.youtube.com/watch?v=MPWWe0hhJuc'
 
 # Use yt-dlp to extract audio from the video
 with ytdlp:
@@ -38,8 +38,8 @@ with audio_file as source:
 recognized_text = r.recognize_google(audio_data, language='pl-PL')
 #
 # # Count the number of occurrences of "yyy"
-yyy_count = recognized_text.count('obraz')
+yyy_count = recognized_text.count('odkurzacza')
 #
 # # Print the result
-print(f"Found {yyy_count} occurrences of 'obraz'.")
+print(f"Found {yyy_count} occurrences of 'odkurzacza'.")
 print(recognized_text)
