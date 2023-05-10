@@ -38,8 +38,8 @@ with audio_file as source:
 recognized_text = r.recognize_google(audio_data, language='pl-PL')
 
 # Count the number of occurrences of "yyy"
-yyy_count = recognized_text.count('odkurzacza')
+word_count = recognized_text.count('odkurzacza')
 
 # Print the result
-print(f"Found {yyy_count} occurrences of 'odkurzacza'.")
+print(f"Found {word_count} occurrences of 'odkurzacza'.")
 print(recognized_text)
