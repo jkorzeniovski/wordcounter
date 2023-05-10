@@ -47,4 +47,6 @@ word_count = recognized_text.count(word)
 
 # Print the result
 print(f"Found {word_count} occurrences of '{word}'.")
-print('\n', recognized_text)
+
+# line below is to check the whole text that has been recognized by SR
+# print(recognized_text)
