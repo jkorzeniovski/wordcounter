@@ -37,9 +37,11 @@ with audio_file as source:
 # Use the recognize_google() method to convert audio to text
 recognized_text = r.recognize_google(audio_data, language='pl-PL')
 
-# Count the number of occurrences of "yyy"
+# Count the number of occurrences of a word declared below.
 word_count = recognized_text.count('odkurzacza')
 
 # Print the result
 print(f"Found {word_count} occurrences of 'odkurzacza'.")
-print(recognized_text)
+
+# line below is to check the whole text that has been recognized by SR
+# print(recognized_text)
