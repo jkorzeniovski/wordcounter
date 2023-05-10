@@ -16,7 +16,7 @@ recognized_text = r.recognize_google(audio_data, language='pl-PL')
 #declare a word to fin in an audio file
 word = ""
 # Count the number of occurrences of "word"
-word_count = recognized_text.count(word)
+word_count = recognized_text.count("yyy")  # We are looking for occurences of yyy to see how much we have to edit out.
 
 # Print the result
 print(f'Number of "{word}" occurrences:', word_count)
