@@ -1,6 +1,10 @@
 import speech_recognition as sr
 import yt_dlp
 
+links = []
+language_specified_links = {}
+possible_video_languages = ("pl-PL", "fr-FR", "eng-US", "ru-RU")
+
 # Create a yt-dlp options object
 ytdlp_options = {
     'format': 'bestaudio/best',  # Choose the best audio format available
@@ -30,7 +34,7 @@ print('Audio extracted successfully!\n')
 r = sr.Recognizer()
 
 # Load the audio file
-audio_file = sr.AudioFile("C:/Users\kubak\PycharmProjects\pythonProject1/mysong.wav")
+audio_file = sr.AudioFile("C:/Users\daniil\Desktop\Python Projekty\Project Voice Recognition\Project Mk2\mysong.wav")
 
 # Open the audio file and convert to audio data
 with audio_file as source:
@@ -40,7 +44,12 @@ with audio_file as source:
 recognized_text = r.recognize_google(audio_data, language='pl-PL')
 
 # Word to find
-word = input('What word do you seek to find?: ')
+while True:
+    try:
+        word = input('What word do you seek to find?: ')
+        break
+    except ValueError:
+        pass
 
 # Count the number of occurrences of "word"
 word_count = recognized_text.count(word)
@@ -50,3 +59,11 @@ print(f"Found {word_count} occurrences of '{word}'.")
 
 # line below is to check the whole text that has been recognized by SR
 # print(recognized_text)
+
+
+def link_holder():
+        links.append(input("Input link: "))
+
+
+def language_link_holder():
+        language_specified_links.update({input("input link: "): input("Input language: ")})
