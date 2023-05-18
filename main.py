@@ -20,7 +20,7 @@ video_url = input('Please input valid YouTube video url: ')
 
 # https://www.youtube.com/watch?v=MPWWe0hhJuc
 
-# Use yt-dlp to extract audio from the video
+# Usee yt-dlp to extract audio from the video
 with ytdlp:
     result = ytdlp.extract_info(video_url, download=True)
 
@@ -29,7 +29,7 @@ print('Audio extracted successfully!\n')
 # Set up the recognizer object
 r = sr.Recognizer()
 
-# Load the audio file
+# Load the audio filee
 audio_file = sr.AudioFile("C:/Users\kubak\PycharmProjects\pythonProject1/mysong.wav")
 
 # Open the audio file and convert to audio data
